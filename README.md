@@ -65,7 +65,7 @@ Software :
 
 
 
-Instructions to execute the source code :
+Instructions to execute the source code(COLAB) :
 
 
 1. Store the input video in drive
@@ -78,7 +78,13 @@ Instructions to execute the source code :
 8. The faces are stored under the folder named after the video in the drive
 9. Load the XceptionNet face classifier model and run the prediction cells to get the output of the video as REAL/FAKE.
 
-
+Instructions to execute the source code(COLAB) :
+1.clone the repositary in your local 
+2.mention the path of the saved model 
+3.give the right path to your input source video and other directories
+4.run the DeepfakeDetection.py in your system 
+5. here you can download the trained model for face detection(MobileNEtV2) - https://drive.google.com/file/d/1i0ksAnGZ_LT2xfyhYRxnObLAZiBUhiH6/view?usp=drive_link
+6.here you can download the trained mode for output classification(XceptionNet) - https://drive.google.com/file/d/1AB-iLvPkKiw3BehaCa4zDBH8qWYdY6L8/view?usp=drive_link
 
 
 
