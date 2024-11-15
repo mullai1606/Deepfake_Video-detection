@@ -1,6 +1,6 @@
 #Frame split-up module
 
-import cv2
+import cv2 
 import os
 import shutil
 
@@ -14,13 +14,12 @@ def getFrame(sec, count, vidcap):
         #plt.imshow(image)
     return hasFrames
 
-def split(inputvidpath, vidname, path):
+def split(inputvidpath, framepath):
     vidcap = cv2.VideoCapture(inputvidpath)
     sec = 0
     frameRate = 0.10 #10 frames per second
     count=1
-    vidname= inputvidpath.split("/")[5]
-    framepath = path+"/splitFrames/"
+    
     #path="/content/drive/MyDrive/sample-images/"+vidname
     if os.path.exists(framepath):
        shutil.rmtree(framepath, ignore_errors=True); #if path already exists delete it
@@ -31,4 +30,5 @@ def split(inputvidpath, vidname, path):
        count = count + 1
        sec = sec + frameRate
        sec = round(sec, 2)
-       success = getFrame(sec)
+       success = getFrame(sec, count,vidcap)
+       return success
