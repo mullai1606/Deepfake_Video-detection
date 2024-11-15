@@ -2,12 +2,13 @@
 from keras._tf_keras.keras.preprocessing.image import ImageDataGenerator
 #Handling Image data Generators
 test_data_gen = ImageDataGenerator()
-from Load_model import newmodel
+# from Load_model import newmodel
 import os
 import pandas as pd
 import numpy as np
-
-def predict_video(facepath):
+import tensorflow as tf
+tf.compat.v1.disable_eager_execution
+def predict_video(facepath,newmodel):
    whatdata=[]
    extractedfaces = facepath
    #facepath="/content/drive/MyDrive/sample-faces/"+vidname

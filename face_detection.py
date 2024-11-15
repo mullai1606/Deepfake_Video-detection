@@ -5,7 +5,7 @@ import math
 import numpy as np
 
 
-modelpath = input()
+modelpath = 'facedetection-mobilenetv2-size224-alpha0.75.h5'
 
 mobilenetv2 = Load_model.load_mobilenetv2_224_075_detector(path=modelpath)
 class FaceDetector():
